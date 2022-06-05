@@ -51,44 +51,42 @@ peticionGet();
           onChange={handleChange}
         />
         <button className="btn btn-success">
-          <FontAwesomeIcon icon={faSearch}/>
+          <FontAwesomeIcon icon={faSearch} />
         </button>
       </div>
 
-     <div className="table-responsive">
-       <table className="table table-sm table-bordered">
-         <thead>
-           <tr>
-             <th>ID</th>
-             <th>Nombre</th>
-             <th>Teléfono</th>
-             <th>Nombre de Usuario</th>
-             <th>Correo</th>
-             <th>Sitio Web</th>
-             <th>Ciudad</th>
-             <th>Empresa</th>
-           </tr>
-         </thead>
+      <div className="table-responsive">
+        <table className="table table-sm table-bordered">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Nombre</th>
+              <th>Teléfono</th>
+              <th>Nombre de Usuario</th>
+              <th>Correo</th>
+              <th>Sitio Web</th>
+              <th>Ciudad</th>
+              <th>Empresa</th>
+            </tr>
+          </thead>
 
-         <tbody>
-           {usuarios && 
-           usuarios.map((usuario)=>(
-             <tr key={usuario.id}>
-               <td>{usuario.id}</td>
-               <td>{usuario.name}</td>
-               <td>{usuario.phone}</td>
-               <td>{usuario.username}</td>
-               <td>{usuario.email}</td>
-               <td>{usuario.website}</td>
-               <td>{usuario.address.city}</td>
-               <td>{usuario.company.name}</td>
-             </tr>
-           ))}
-         </tbody>
-
-       </table>
-
-     </div>
+          <tbody>
+            {usuarios &&
+              usuarios.map((usuario) => (
+                <tr key={usuario.id}>
+                  <td>{usuario.id}</td>
+                  <td>{usuario.name}</td>
+                  <td>{usuario.phone}</td>
+                  <td>{usuario.username}</td>
+                  <td>{usuario.email}</td>
+                  <td>{usuario.website}</td>
+                  <td>{usuario.address.city}</td>
+                  <td>{usuario.company.name}</td>
+                </tr>
+              ))}
+          </tbody>
+        </table>
+      </div>
     </div>
   );
 }
